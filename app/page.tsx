@@ -1,4 +1,5 @@
 import { DM_Sans, DM_Serif_Display } from "next/font/google";
+import PrivyConnect from "./privy-connect";
 
 const body = DM_Sans({
   subsets: ["latin"],
@@ -17,7 +18,7 @@ export default function Home() {
     >
       <div className="pointer-events-none absolute -top-32 right-[-10%] h-72 w-72 rounded-full bg-gradient-to-br from-amber-200 via-orange-100 to-transparent blur-3xl opacity-70" />
       <div className="pointer-events-none absolute bottom-[-8%] left-[-10%] h-80 w-80 rounded-full bg-gradient-to-tr from-sky-200 via-emerald-100 to-transparent blur-3xl opacity-60" />
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(15,23,42,0.04)_1px,transparent_1px),linear-gradient(180deg,rgba(15,23,42,0.04)_1px,transparent_1px)] bg-[size:48px_48px] opacity-40" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(15,23,42,0.04)_1px,transparent_1px),linear-gradient(180deg,rgba(15,23,42,0.04)_1px,transparent_1px)] bg-[size:48px_48px] opacity-90" />
 
       <div className="relative mx-auto flex w-full max-w-4xl flex-col gap-12 px-6 py-16 lg:py-24">
         <header className="space-y-6">
@@ -55,7 +56,25 @@ export default function Home() {
           <p>So let me show you a better fucking crypto website.</p>
         </section>
 
-        <section className="space-y-5 border-l-2 border-stone-200/70 pl-6">
+        <section className="flex flex-col gap-6 border-y border-stone-200/70 py-6 md:flex-row md:items-center md:justify-between">
+          <div className="space-y-3">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-stone-500">
+              Beginner friendly login
+            </p>
+            <h2 className="text-2xl font-semibold text-stone-900">
+              Connect like a normal person.
+            </h2>
+            <p className="max-w-xl text-stone-700">
+              This button uses Privy. Pick Google, Apple, or email. If you want
+              a wallet, we create one quietly. No signature theater on day one.
+            </p>
+          </div>
+          <div className="w-full max-w-xs">
+            <PrivyConnect />
+          </div>
+        </section>
+
+        <section className="space-y-5 border-l border-stone-200/70 pl-6">
           <h2 className="text-2xl font-semibold text-stone-900">
             First rule: do not treat users like cryptography PhDs
           </h2>
@@ -75,7 +94,7 @@ export default function Home() {
           <p className="text-stone-700">Congrats. You lost them.</p>
         </section>
 
-        <section className="space-y-5 border-l-2 border-stone-200/70 pl-6">
+        <section className="space-y-5 border-l border-stone-200/70 pl-6">
           <h2 className="text-2xl font-semibold text-stone-900">
             Authentication should not feel like a bank robbery
           </h2>
@@ -118,14 +137,14 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="space-y-5 border-l-2 border-stone-200/70 pl-6">
+        <section className="space-y-5 border-l border-stone-200/70 pl-6">
           <h2 className="text-2xl font-semibold text-stone-900">
             Connect wallet is not a feature
           </h2>
           <p className="text-stone-700">It is a tax. A lazy one.</p>
           <p className="text-stone-700">
-            You slapped WalletKit / WalletConnect on the page and called it a
-            day. You did not design anything. You outsourced UX to a popup.
+            You slapped a wallet connect modal on the page and called it a day.
+            You did not design anything. You outsourced UX to a popup.
           </p>
           <p className="text-stone-700">How about you build a site that:</p>
           <ul className="list-disc space-y-2 pl-5 text-stone-700">
@@ -139,7 +158,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="space-y-5 border-l-2 border-stone-200/70 pl-6">
+        <section className="space-y-5 border-l border-stone-200/70 pl-6">
           <h2 className="text-2xl font-semibold text-stone-900">
             No fucking dashboards full of lies
           </h2>
@@ -165,7 +184,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="space-y-5 border-l-2 border-stone-200/70 pl-6">
+        <section className="space-y-5 border-l border-stone-200/70 pl-6">
           <h2 className="text-2xl font-semibold text-stone-900">
             Gas fees are your problem, not the user&apos;s
           </h2>
@@ -195,7 +214,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="space-y-5 border-l-2 border-stone-200/70 pl-6">
+        <section className="space-y-5 border-l border-stone-200/70 pl-6">
           <h2 className="text-2xl font-semibold text-stone-900">
             Security without paranoia theater
           </h2>
@@ -221,7 +240,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="space-y-5 border-l-2 border-stone-200/70 pl-6">
+        <section className="space-y-5 border-l border-stone-200/70 pl-6">
           <h2 className="text-2xl font-semibold text-stone-900">
             Crypto does not need to look like a spaceship
           </h2>
@@ -245,7 +264,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="space-y-5 border-l-2 border-stone-200/70 pl-6">
+        <section className="space-y-5 border-l border-stone-200/70 pl-6">
           <h2 className="text-2xl font-semibold text-stone-900">
             Stop fetishizing decentralization
           </h2>
@@ -266,7 +285,7 @@ export default function Home() {
           </ul>
         </section>
 
-        <section className="space-y-5 border-l-2 border-stone-200/70 pl-6">
+        <section className="space-y-5 border-l border-stone-200/70 pl-6">
           <h2 className="text-2xl font-semibold text-stone-900">
             Education without condescension
           </h2>
@@ -290,7 +309,7 @@ export default function Home() {
           <p className="text-stone-700">Teach by doing, not by lecturing.</p>
         </section>
 
-        <section className="space-y-5 border-l-2 border-stone-200/70 pl-6">
+        <section className="space-y-5 border-l border-stone-200/70 pl-6">
           <h2 className="text-2xl font-semibold text-stone-900">
             How about you build a site that: respects the user&apos;s time
           </h2>
@@ -329,7 +348,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="space-y-5 border-l-2 border-stone-200/70 pl-6">
+        <section className="space-y-5 border-l border-stone-200/70 pl-6">
           <h2 className="text-2xl font-semibold text-stone-900">
             The bar is low. Please step over it.
           </h2>
